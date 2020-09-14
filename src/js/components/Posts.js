@@ -8,7 +8,8 @@ export class Post extends Component {
   }
 
   componentDidMount() {
-    // calling the new action creator
+    // before changes in connect, execute this componentDidMount as Handle Submit, 
+    // and getData act liek mapDispatchToProps, dispatching action to reducer
     this.props.getData();
   }
 
@@ -26,7 +27,7 @@ export class Post extends Component {
 function mapStateToProps(state) {
   return {
     articles: state.remoteArticles.slice(0, 10)
-  };
+  }; // connecr props articles to state.remoteArticles for state reading
 }
 
 export default connect(

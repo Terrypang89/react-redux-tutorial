@@ -8,7 +8,7 @@ export function addArticle(payload) {
 
 // our new action creator. Will it work?
 export function getData() {
-  return function(dispatch) {
+  return function(dispatch) { // add dispatch to dispatch actions 
     return fetch("https://jsonplaceholder.typicode.com/posts")
       .then(response => response.json())
       .then(json => {
