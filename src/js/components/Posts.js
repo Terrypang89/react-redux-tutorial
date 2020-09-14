@@ -10,7 +10,8 @@ export class Post extends Component {
   componentDidMount() {
     // before changes in connect, execute this componentDidMount as Handle Submit, 
     // and getData act liek mapDispatchToProps, dispatching action to reducer
-    this.props.getData();
+    //this.props.getData();
+    this.props.getData("https://api.valentinog.com/api/link/");
   }
 
   render() {
